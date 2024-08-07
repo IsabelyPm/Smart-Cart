@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "MoreSugar";
+    src: url("../FONTS/more-sugar.regular.ttf");
+  }
+
+#shopping-list {
+    text-align: center;
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    z-index: 4;
+    font-family: MoreSugar;
+    margin-left: 1246px;
+    margin-top: -560px;
+    transform: rotate(-3deg);
+    position: absolute; /* Define posição para usar z-index */
+}
+
+#folha{
+    position: absolute;
+    margin-left: -460px;
+    z-index: 2;
+    margin-top: -70px;
+    
+    
+}
+#lista{
+    position: absolute;
+    margin-left: 1190px;
+    z-index: 3;
+    margin-top: -650px;
+    font-size: 20px;
+    transform: rotate(-3deg);
+    font-family: MoreSugar;
+    text-shadow: 2px 2px 15px rgb(255, 255, 255);
+    text-align: center;
+
+}
+#grt{
+    position: absolute;
+    margin-left: -290px;
+    z-index: 5;
+ 
+    height: 350px;
+    margin-top: 350px;
+    filter:drop-shadow(0 0 100px yellow);
+}
+#returnButton {
+    font-family: MoreSugar;
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ba05c0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -840px;
+    margin-top: 530px;
+    z-index: 6;
+    font-size: 20px;
+}
+
+#returnButton:hover {
+    font-family: MoreSugar;
+    font-size: 20px;
+    background-color: #570188;
+}
+#cronometro{
+  margin-right: 900px;
+    margin-top: 20px;
+}
+#cronometro {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    font-family: MoreSugar;
+    z-index: 10;
+}

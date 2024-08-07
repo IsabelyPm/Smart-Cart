@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css" media="screen" />
+    <title>Game</title>
+    <style>
+        @font-face {
+    font-family: "MoreSugar";
+    src: url("../FONTS/more-sugar.regular.ttf");
+  }
+
+        /* Estilo para o modal */
+        .modal {
+            display: none; /* Oculta o modal por padrão */
+            position: fixed; /* Fixa o modal na tela */
+            z-index: 1000; /* Garante que o modal fique acima de outros conteúdos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Adiciona rolagem se necessário */
+            background-color: rgba(0,0,0,0.4); /* Cor de fundo semi-transparente */
+            filter: drop-shadow(0 0 50px rgb(132, 1, 172));    
+            animation: fadeIn 0.5s ease-out; /* Animação de entrada */
+        }
+
+        .modal-content {
+            background-color: #ffeb0f;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #a012ff;
+            width: 80%; /* Largura do modal */
+            max-width: 600px;
+            text-align: center;
+            border-radius: 15px; /* Bordas arredondadas */
+            transform: scale(0.8);
+            opacity: 0;
+            animation: scaleUp 0.5s ease-out forwards; /* Animação de entrada do conteúdo */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .close {
+            color: #ffaa00;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        h2 {
+            color: rgb(0, 0, 0);
+            font-family: MoreSugar;
+        }
+         /* Estilo para quando o modal estiver fechado */
+         .modal.fade-out {
+            animation: fadeOut 0.6s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvasMenu" width="1500" height="720"></canvas> <!--cria o espaço para desenhar na tela-->
+    <img id="folha" src="../IMG/folha.png">
+    <h1 id="lista">Get the items <br> for Mommy's pasta!</h1>
+    <ul id="shopping-list">
+        <li id="item1">-Tuna</li>
+        <li id="item2">-Pasta</li>
+        <li id="item3">-Tomato Sauce</li>
+        <li id="item4">-Soda</li>
+        <li id="item5">-Butter</li>
+        <li id="item6">-Salt</li>
+    </ul>
+    <img id="grt" src="../IMG/boy1.png">
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Help his mommy by getting the items she needs to cook pasta!<br> Pick only the items on the list!</h2>
+        </div>
+    </div>
+    <div id="cronometro-container">
+        <span id="cronometro">Tempo: 60s</span>
+    </div>
+    <audio id="backgroundMusic" loop>
+        <source src="../SND/Children's Music — Happy Upbeat Music (Instrumental Music For Kids).mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <script src="../JS/mercado.js"></script>
+   
+</body>
+</html>

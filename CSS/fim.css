@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Lonely";
+    src: url("../FONTS/Lonely\ Coffee.ttf");
+}
+
+#boy{
+    position: absolute;
+    margin-left: 1250px;
+    z-index: 5;
+    height: 350px;
+    margin-top: 350px;
+    filter: drop-shadow(0 0 100px yellow);
+    opacity: 0; /* Inicialmente invisível */
+    transform: scale(0.5); /* Inicialmente menor */
+    animation: fadeInUp 2s forwards; /* Animação aplicada */
+}
+
+/* Estilo para o texto */
+.congratulations {
+    font-size: 70px;
+    font-weight: bold;
+    color: #af00b5; /* Cor do texto, altere conforme sua preferência */
+    opacity: 0; /* Inicialmente invisível */
+    transform: scale(0.5); /* Inicialmente menor */
+    animation: fadeInUp 2s forwards; /* Animação aplicada */
+    font-family: Lonely;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%) scale(0.5); /* Centraliza completamente e aplica o scale inicial */
+    margin-top: -300px;
+    margin-left: -200px;
+}
+
+/* Definição da animação */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5) translateY(50px); /* Começa menor e mais abaixo */
+    }
+    50% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1.1) translateY(-20px); /* Aumenta um pouco e sobe */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) translateY(0); /* Tamanho final e posição final */
+    }
+}
+
+/* Estilo para o botão */
+.back-button {
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 720px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #b000f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Inicialmente deslocado para baixo */
+    animation: fadeInButton 2s forwards; /* Animação aplicada */
+    animation-delay: 1s; /* Atraso na animação do botão */
+}
+
+/* Definição da animação do botão */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Deslocado para baixo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posição final */
+    }
+}
+
+/* Estilo de hover para o botão */
+.back-button:hover {
+    background-color: #5d028f;
+}
+/* Estilo para o canvas */
+#canvasMenu {
+    opacity: 0; /* Inicialmente invisível */
+    transform: scale(0.5); /* Inicialmente menor */
+    animation: fadeInUp 2s forwards; /* Animação aplicada */
+    position: absolute;
+    top: 0;
+    left: 50;
+}
+
+/* Definição da animação */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px); /* Começa menor e mais abaixo */
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1) translateY(-20px); /* Aumenta um pouco e sobe */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* Tamanho final e posição final */
+    }
+}
