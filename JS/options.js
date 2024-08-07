@@ -19,7 +19,7 @@ function atualizarPlanoDeFundo() {
 }
 atualizarPlanoDeFundo();
 document.getElementById('returnButton').addEventListener('click', function() {
-    window.location.href = './index.html'; // Caminho para a página inicial
+    window.location.href = '/index.html'; // Caminho para a página inicial
 });
 document.addEventListener('DOMContentLoaded', function() {
     // Inicia a trilha sonora

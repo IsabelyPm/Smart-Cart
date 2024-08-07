@@ -55,7 +55,7 @@ function iniciarCronometro() {
         if (tempoRestante <= 0) {
             pararCronometro();
             alert("O tempo acabou!");
-            window.location.href = './index.html';
+            window.location.href = '/index.html';
         }
     }, 1000);
 }
